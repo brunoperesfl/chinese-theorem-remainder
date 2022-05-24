@@ -1,4 +1,4 @@
-function mdc(n1, n2) { // calcula mdc
+function mdc(n1, n2) { // calcula mdc, talvez deletar dps!!!!!!
     if (!n2) {
       return n1;
     }
@@ -59,14 +59,14 @@ function calcModulo (poscongr, modulom) { // função q calcula o modulo m
 
 
 // b -- o primeiro numero após a congruencia
-let b1 = 5
-let b2 = 4
-let b3 = 1
+let b1 = 1
+let b2 = -1
+let b3 = 4
 
 //mod m
-let m1 = 7
-let m2 = 9
-let m3 = 10
+let m1 = 2
+let m2 = 3
+let m3 = 7
 
 //M
 let mz1 = m2 * m3
@@ -103,10 +103,22 @@ let total3 = b3 * mz3 * inversm3
 //a resposta eh a soma dos totais mod m1*m2*m3
 let modresp = (m1 * m2 * m3) 
 let respostasoma = total1 + total2 + total3
-let resposta = calcModulo(respostasoma, modresp)
+let resposta = calcModulo(respostasoma, modresp) // esse eh o x0
 console.log(resposta)
-console.log(modresp)
-console.log(respostasoma)
+
+
+//achando a resposta, equacao final sera:
+// resposta + modresp * t
+//t = 1,2,3...
+
+for(let t = 0; t < 5; t++){ // possiveis respostas
+  let finalresp = resposta + (modresp * t)
+  console.log(finalresp)
+}
+
+//equacao geral:
+console.log(resposta + " + " + modresp + " * t")
+
 
 
 
