@@ -5,38 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teorema do Resto Chinês</title>
 </head>
 <body>
-    <header>teorema do rest xiney</header>
+    <header>Teorema do Resto Chinês</header>
 
     <article>
-        <input onchange="atualizar1(this.value)" class="post-x-1" type="text">
-        <input onchange="atualizar1(this.value)" class="mod-1" type="text">
+        <input onchange="atualizar1(this.value)" class="post-x-1" type="text" placeholder="b">
+        <input onchange="atualizar1(this.value)" class="mod-1" type="text" placeholder="m">
         <br>
-        <input onchange="atualizar2(this.value)" class="post-x-2" type="text">
-        <input onchange="atualizar2(this.value)" class="mod-2" type="text">
+        <input onchange="atualizar2(this.value)" class="post-x-2" type="text" placeholder="b">
+        <input onchange="atualizar2(this.value)" class="mod-2" type="text" placeholder="m">
         <br>
-        <input onchange="atualizar3(this.value)" class="post-x-3" type="text">
-        <input onchange="atualizar3(this.value)" class="mod-3" type="text">
-
-        <div class="equacao-1"></div>
-        <div class="equacao-2"></div>
-        <div class="equacao-3"></div>
-
-        <button class="calc" onclick="calcular()">calcular</button>
+        <input onchange="atualizar3(this.value)" class="post-x-3" type="text" placeholder="b">
+        <input onchange="atualizar3(this.value)" class="mod-3" type="text" placeholder="m">
+        <div class="container">
+            <div class="equacao-1">X ≡ b (mod m)</div>
+            <div class="equacao-2">X ≡ b (mod m)</div>
+            <div class="equacao-3">X ≡ b (mod m)</div>
+        </div>
+        <button class="calc" onclick="calcular()">Calcular</button>
 
         <div class="x0"></div>
 
         <span class="psolucoes"></span>
-        <div class="solucoes"></div>
-        
+        <div class="containersol">
+            <div class="solucoes"></div>
+            <div class="solucoes2"></div>
+        </div>
         <div class="eqgeral"></div>
     </article>
     
 
 
-<footer>criado por bryuno luis e jau</footer>
+<footer>Criado por: Bruno Peres Florindo, Luiz Felipe Dias Martins, João Vitor Rodrigues Teodoro</footer>
 
 
     <script src="script.js"></script>
