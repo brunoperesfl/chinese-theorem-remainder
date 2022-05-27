@@ -4,32 +4,8 @@ function mdc(n1, n2) { // calcula mdc, talvez deletar dps!!!!!!
     }
     return mdc(n2, n1 % n2);
   }
-/*
-function atualizar(){ // atualiza oq ta escrito no input
-    var a = document.querySelector(".pre-x").value;
-    var b = document.querySelector(".post-x").value;
-    var m = document.querySelector(".mod").value;
-    document.querySelector(".equacao").innerHTML = `${a}X ≡ ${b} (mod ${m}) `;
-//---------------------------------------------------------------------------------
 
-let d = mdc(a, m)
-let a1 = a/d;
-let b1 = b/d;
-let n = m/d;
-let r 
-let s
-r = (d/a) - (s*m)/a
-s = (d/m) - (r*a)/m
-d == ((r*a) + (s*m))
-console.log(r+" este e r")
-console.log(s+" este e s")
-console.log(a1)
-console.log(d)
-    
-
-}
-
-*/ //antigo acima, testando novo abaixo
+//antigo acima, testando novo abaixo
 
 //exemplo de sistema:
 /*
@@ -58,15 +34,42 @@ function calcModulo (poscongr, modulom) { // função q calcula o modulo m
 
 
 
+
+function atualizar1(){ // atualiza oq ta escrito no input
+  let b = document.querySelector(".post-x-1").value;
+  let m = document.querySelector(".mod-1").value;
+  document.querySelector(".equacao-1").innerHTML = `X ≡ ${b} (mod ${m}) `;
+}
+
+function atualizar2(){ // atualiza oq ta escrito no input
+  let b = document.querySelector(".post-x-2").value;
+  let m = document.querySelector(".mod-2").value;
+  document.querySelector(".equacao-2").innerHTML = `X ≡ ${b} (mod ${m}) `;
+}
+
+function atualizar3(){ // atualiza oq ta escrito no input
+  let b = document.querySelector(".post-x-3").value;
+  let m = document.querySelector(".mod-3").value;
+  document.querySelector(".equacao-3").innerHTML = `X ≡ ${b} (mod ${m}) `;
+}
+
+
+
+
+const calcular = () => {
+
 // b -- o primeiro numero após a congruencia
-let b1 = 1
-let b2 = -1
-let b3 = 4
+let b1 = document.querySelector(".post-x-1").value
+let b2 = document.querySelector(".post-x-2").value
+let b3 = document.querySelector(".post-x-3").value
+
+//BUG \/
+//quando eu coloco outro valor sem atualizar a pagina, ele escreve a mais em baixo, CONSERTAR ISSO
 
 //mod m
-let m1 = 2
-let m2 = 3
-let m3 = 7
+let m1 = document.querySelector(".mod-1").value
+let m2 = document.querySelector(".mod-2").value
+let m3 = document.querySelector(".mod-3").value
 
 //M
 let mz1 = m2 * m3
@@ -104,23 +107,27 @@ let total3 = b3 * mz3 * inversm3
 let modresp = (m1 * m2 * m3) 
 let respostasoma = total1 + total2 + total3
 let resposta = calcModulo(respostasoma, modresp) // esse eh o x0
-console.log(resposta)
+document.querySelector(".x0").innerHTML = "x0 =  " +  resposta
+
+
 
 
 //achando a resposta, equacao final sera:
 // resposta + modresp * t
 //t = 1,2,3...
-
-for(let t = 0; t < 5; t++){ // possiveis respostas
+document.querySelector(".psolucoes").innerHTML = "Possíveis soluções:"
+for(let t = 0; t <= 5; t++){ // possiveis respostas
   let finalresp = resposta + (modresp * t)
+  document.querySelector(".solucoes").innerHTML +=  finalresp  + '<br>'
   console.log(finalresp)
 }
 
 //equacao geral:
+document.querySelector(".eqgeral").innerHTML = "Equação geral: <br>" + resposta + " + " + modresp + " * t"
+console.log("Equação final:")
 console.log(resposta + " + " + modresp + " * t")
 
-
-
+}
 
 
 
@@ -142,5 +149,4 @@ function soma(){
 
     let result = parseInt(input1) + parseInt(input2);
     document.querySelector(".equacao").innerHTML = input1;
-    console.log(result)
 }*/

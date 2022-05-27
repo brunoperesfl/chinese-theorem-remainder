@@ -11,12 +11,27 @@
     <header>teorema do rest xiney</header>
 
     <article>
-        <input onchange="atualizar(this.value)" class="pre-x" type="text">
-        <input onchange="atualizar(this.value)" class="post-x" type="text">
-        <input onchange="atualizar(this.value)" class="mod" type="text">
+        <input onchange="atualizar1(this.value)" class="post-x-1" type="text">
+        <input onchange="atualizar1(this.value)" class="mod-1" type="text">
+        <br>
+        <input onchange="atualizar2(this.value)" class="post-x-2" type="text">
+        <input onchange="atualizar2(this.value)" class="mod-2" type="text">
+        <br>
+        <input onchange="atualizar3(this.value)" class="post-x-3" type="text">
+        <input onchange="atualizar3(this.value)" class="mod-3" type="text">
 
-        <div class="equacao"></div>
-        <button class="calc">calcular</button>
+        <div class="equacao-1"></div>
+        <div class="equacao-2"></div>
+        <div class="equacao-3"></div>
+
+        <button class="calc" onclick="calcular()">calcular</button>
+
+        <div class="x0"></div>
+
+        <span class="psolucoes"></span>
+        <div class="solucoes"></div>
+        
+        <div class="eqgeral"></div>
     </article>
     
 
