@@ -47,6 +47,9 @@ input{
     background-color:rgb(65, 65, 65);
     box-shadow: 1px 1px 1px black;
 }
+.calc:hover{
+    background-color: rgb(41, 41, 41);
+}
 .x0{
     margin-top: 15px;
     padding: 5px;
