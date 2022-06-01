@@ -1,27 +1,10 @@
-function mdc(n1, n2) { // calcula mdc, talvez deletar dps!!!!!!
-    if (!n2) {
-      return n1;
-    }
-    return mdc(n2, n1 % n2);
-  }
-
-
-//exemplo de sistema:
-/*
-{x ≡ b1 (mod m1)
-{x ≡ b2 (mod m2)
-{x ≡ b3 (mod m3)
-
-*/
-
-
-
-
 function calcInversoMod(a, m){ // funcao q calcula o inverso modular
   for(let x = 1; x < m; x++)
     if (((a % m) * (x % m)) % m == 1)
       return x;
 }
+
+
 
 function calcModulo (poscongr, modulom) { // função q calcula o modulo m
   let passo1 = Math.floor(poscongr/modulom);
@@ -78,23 +61,17 @@ let mz3 = m1 * m2
 
 //m barrado
 //auxiliar pra calculo de classe de equivalencia:
-let firstAuxmc1 = Math.floor(mz1/m1)
-let secondAuxmc1 = firstAuxmc1 * m1
-let auxmc1 = mz1 - secondAuxmc1
+let mbar1 = calcModulo(mz1, m1)
 
-let firstAuxmc2 = Math.floor(mz2/m2)
-let secondAuxmc2 = firstAuxmc2 * m2
-let auxmc2 = mz2 - secondAuxmc2
+let mbar2 = calcModulo(mz2, m2)
 
-let firstAuxmc3 = Math.floor(mz3/m3)
-let secondAuxmc3 = firstAuxmc3 * m3
-let auxmc3 = mz3 - secondAuxmc3
+let mbar3 = calcModulo(mz3, m3)
 
 
 //classe inversa:
-let inversm1 = calcInversoMod(auxmc1, m1)
-let inversm2 = calcInversoMod(auxmc2, m2)
-let inversm3 = calcInversoMod(auxmc3, m3)
+let inversm1 = calcInversoMod(mbar1, m1)
+let inversm2 = calcInversoMod(mbar2, m2)
+let inversm3 = calcInversoMod(mbar3, m3)
 
 //ultima parte do calculo:
 //b * M * classe inversa
